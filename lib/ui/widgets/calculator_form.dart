@@ -46,15 +46,22 @@ class CalculatorFormState extends State<CalculatorForm> {
           Measurement measurement =
               BlocProvider.of<CalculatorBloc>(context).state.stats.measurement;
 
+          final double height = MediaQuery.of(context).size.height;
+
           return Stack(
             children: <Widget>[
-              Positioned(
-                bottom: 0,
-                child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width,
-                    child: Background()),
-              ),
+              height > 865
+                  ? Positioned(
+                      bottom: 0,
+                      child: Container(
+                          height: 100,
+                          width: MediaQuery.of(context).size.width,
+                          child: Background()),
+                    )
+                  : Container(
+                      width: 0,
+                      height: 0,
+                    ),
               ListView(
                 children: <Widget>[
                   Padding(

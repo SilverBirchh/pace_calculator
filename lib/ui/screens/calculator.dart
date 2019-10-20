@@ -13,8 +13,11 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
+
+    final double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: height > 865 ? false : true,
       key: _calculatorKey,
       appBar: AppBar(
         leading: Icon(Icons.directions_run),
