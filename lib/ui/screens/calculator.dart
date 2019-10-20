@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pace_calculator/ui/widgets/calculator_form.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pace_calculator/bloc/calculator/bloc.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 class Calculator extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _CalculatorState extends State<Calculator> {
       key: _calculatorKey,
       appBar: AppBar(
         leading: Icon(Icons.directions_run),
-        title: Text('Pace Calculator'),
+        title: Text(AppLocalizations.of(context).shortTitle),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.delete),

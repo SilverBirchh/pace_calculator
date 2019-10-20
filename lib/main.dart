@@ -6,6 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pace_calculator/bloc/calculator/bloc.dart';
 import 'package:pace_calculator/bloc/light_theme/bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:pace_calculator/translations/localisations_delegate.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +28,31 @@ class Pace extends StatelessWidget {
       child: BlocBuilder<LightThemeBloc, bool>(
         builder: (BuildContext context, bool useLightTheme) {
           return MaterialApp(
-            title: 'Running Pace Calculator',
+            localizationsDelegates: [
+              const AppLocalizationsDelegate(),
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate
+            ],
+            localeResolutionCallback:
+                (Locale locale, Iterable<Locale> supportedLocales) {
+              for (Locale supportedLocale in supportedLocales) {
+                if (locale == null) {
+                  return supportedLocales.first;
+                }
+
+                if (supportedLocale.languageCode == locale?.languageCode ||
+                    supportedLocale.countryCode == locale?.countryCode) {
+                  return supportedLocale;
+                }
+              }
+
+              return supportedLocales.first;
+            },
+            supportedLocales: [
+              const Locale('en'),
+            ],
+            onGenerateTitle: (BuildContext context) =>
+                AppLocalizations.of(context).title,
             theme: useLightTheme ? ThemeData.light() : ThemeData.dark(),
             initialRoute: '/',
             debugShowCheckedModeBanner: false,

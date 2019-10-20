@@ -3,6 +3,7 @@ import 'package:pace_calculator/ui/widgets/bullet.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pace_calculator/bloc/light_theme/bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 class Info extends StatelessWidget {
   @override
@@ -12,21 +13,21 @@ class Info extends StatelessWidget {
     return Scaffold(
       key: _infoKey,
       appBar: AppBar(
-        title: Text('Information'),
+        title: Text(AppLocalizations.of(context).info),
       ),
       body: ListView(
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(16),
             child: Text(
-              'The running pace calculator helps you to calculate the time, distance or pace of your run. Calculating your pace is not only interesting, but also useful, as it helps you to run and train better.',
+              AppLocalizations.of(context).infoOne,
               style: TextStyle(fontSize: 16),
             ),
           ),
           Container(
             padding: EdgeInsets.all(16),
             child: Text(
-              'Enter any two values to calculate the third:',
+              AppLocalizations.of(context).infoTwo,
               style: TextStyle(fontSize: 16),
             ),
           ),
@@ -36,7 +37,7 @@ class Info extends StatelessWidget {
               children: <Widget>[
                 Bullet(),
                 Text(
-                  'Time',
+                  AppLocalizations.of(context).time,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 )
               ],
@@ -48,7 +49,7 @@ class Info extends StatelessWidget {
               children: <Widget>[
                 Bullet(),
                 Text(
-                  'Distance',
+                  AppLocalizations.of(context).distance,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 )
               ],
@@ -60,7 +61,7 @@ class Info extends StatelessWidget {
               children: <Widget>[
                 Bullet(),
                 Text(
-                  'Pace',
+                  AppLocalizations.of(context).pace,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 )
               ],
@@ -76,7 +77,7 @@ class Info extends StatelessWidget {
               children: <Widget>[
                 Expanded(
                   child: Text(
-                    'Dark theme',
+                    AppLocalizations.of(context).dark,
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),

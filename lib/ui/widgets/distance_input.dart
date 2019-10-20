@@ -3,6 +3,7 @@ import 'package:pace_calculator/data/stats.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pace_calculator/bloc/calculator/bloc.dart';
 import 'package:pace_calculator/ui/widgets/error_text.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 class DistanceInput extends StatelessWidget {
   DistanceInput({this.distanceController, this.onChanged, this.hasError});
@@ -30,7 +31,9 @@ class DistanceInput extends StatelessWidget {
                   controller: distanceController,
                   onChanged: (v) => null,
                   decoration: InputDecoration(
-                    labelText: measurement == Measurement.KM ? 'Km' : 'Miles',
+                    labelText: measurement == Measurement.KM
+                        ? AppLocalizations.of(context).km
+                        : AppLocalizations.of(context).miles,
                   ),
                 ),
               ),
@@ -46,8 +49,10 @@ class DistanceInput extends StatelessWidget {
                     return DropdownMenuItem<Measurement>(
                       value: measurement,
                       child: measurement == Measurement.KM
-                          ? Text('KM')
-                          : Text('Miles'),
+                          ? Text(
+                              AppLocalizations.of(context).km.toUpperCase(),
+                            )
+                          : Text(AppLocalizations.of(context).miles),
                     );
                   },
                 ).toList(),
@@ -57,7 +62,7 @@ class DistanceInput extends StatelessWidget {
           ],
         ),
         hasError
-            ? ErrorText('Time and pace are required to calculate distance.')
+            ? ErrorText(AppLocalizations.of(context).distError)
             : Container(
                 width: 0,
                 height: 0,

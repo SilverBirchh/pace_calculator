@@ -1,0 +1,87 @@
+{
+  "@@last_modified": "2019-10-20T13:48:22.773052",
+  "title": "Running Pace Calculator",
+  "@title": {
+    "description": "Title pace",
+    "type": "text",
+    "placeholders": {}
+  },
+  "time": "Time",
+  "@time": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "calcPace": "Calculate Pace",
+  "@calcPace": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "paceKM": "Pace Per Kilometer",
+  "@paceKM": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "km": "Km",
+  "@km": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "seconds": "Seconds",
+  "@seconds": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "distError": "Time and pace are required to calculate distance.",
+  "@distError": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "timeError": "Distance and pace are required to calculate time.",
+  "@timeError": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "paceError": "Time and distance are required to calculate pace.",
+  "@paceError": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "miles": "Miles",
+  "@miles": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "paceMile": "Pace Per Mile",
+  "@paceMile": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "calcTime": "Calculate Time",
+  "@calcTime": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "calcDistance": "Calculate Distance",
+  "@calcDistance": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Dark theme",
+  "@dark": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  }
+}

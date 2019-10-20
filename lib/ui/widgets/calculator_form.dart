@@ -10,6 +10,7 @@ import 'package:pace_calculator/data/stats.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pace_calculator/bloc/calculator/bloc.dart';
 import 'package:pace_calculator/helpers/timings.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 enum SOURCE { TIME, DISTANCE, PACE }
 
@@ -69,7 +70,7 @@ class CalculatorFormState extends State<CalculatorForm> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Header('Time'),
+                        Header(AppLocalizations.of(context).time),
                         TimeInput(
                           hoursController: timeHoursController,
                           minutesController: timeMinutesController,
@@ -77,7 +78,7 @@ class CalculatorFormState extends State<CalculatorForm> {
                           hasError: calculatorState is TimeError,
                         ),
                         CalcButton(
-                          text: 'Calculate Time',
+                          text: AppLocalizations.of(context).calcTime,
                           onPressed: () {
                             FocusScope.of(context).requestFocus(FocusNode());
                             calculateStats(SOURCE.TIME);
@@ -91,14 +92,14 @@ class CalculatorFormState extends State<CalculatorForm> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Header('Distance'),
+                        Header(AppLocalizations.of(context).distance),
                         DistanceInput(
                           distanceController: distanceController,
                           onChanged: onMeasurementChange,
                           hasError: calculatorState is DistanceError,
                         ),
                         CalcButton(
-                          text: 'Calculate Distance',
+                          text: AppLocalizations.of(context).calcDistance,
                           onPressed: () {
                             FocusScope.of(context).requestFocus(FocusNode());
                             calculateStats(SOURCE.DISTANCE);
@@ -113,15 +114,15 @@ class CalculatorFormState extends State<CalculatorForm> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Header(measurement == Measurement.KM
-                            ? 'Pace Per Kilometer'
-                            : 'Pace Per Mile'),
+                            ? AppLocalizations.of(context).paceKM
+                            : AppLocalizations.of(context).paceMile),
                         PaceInput(
                           minutesController: paceMinutesController,
                           secondsController: paceSecondsController,
                           hasError: calculatorState is PaceError,
                         ),
                         CalcButton(
-                          text: 'Calculate Pace',
+                          text: AppLocalizations.of(context).calcPace,
                           onPressed: () {
                             FocusScope.of(context).requestFocus(FocusNode());
                             calculateStats(SOURCE.PACE);

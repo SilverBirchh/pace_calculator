@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:core';
 import 'package:pace_calculator/ui/widgets/error_text.dart';
+import 'package:pace_calculator/translations/localisations.dart';
 
 class TimeInput extends StatelessWidget {
   TimeInput(
@@ -27,7 +28,7 @@ class TimeInput extends StatelessWidget {
                 controller: hoursController,
                 onChanged: (v) => null,
                 decoration: InputDecoration(
-                  labelText: 'Hours',
+                  labelText: AppLocalizations.of(context).hour,
                 ),
               ),
             ),
@@ -39,7 +40,7 @@ class TimeInput extends StatelessWidget {
                   controller: minutesController,
                   onChanged: (v) => null,
                   decoration: InputDecoration(
-                    labelText: 'Minutes',
+                    labelText: AppLocalizations.of(context).minutes,
                   ),
                 ),
               ),
@@ -50,7 +51,7 @@ class TimeInput extends StatelessWidget {
                 controller: secondsController,
                 onChanged: (v) => null,
                 decoration: InputDecoration(
-                  labelText: 'Seconds',
+                  labelText: AppLocalizations.of(context).seconds,
                 ),
               ),
             )
@@ -58,7 +59,7 @@ class TimeInput extends StatelessWidget {
         ),
         Container(
           child: hasError
-              ? ErrorText('Distance and pace are required to calculate time.')
+              ? ErrorText(AppLocalizations.of(context).timeError)
               : Container(
                   width: 0,
                   height: 0,
