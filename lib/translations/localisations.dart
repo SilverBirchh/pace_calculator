@@ -25,39 +25,39 @@ class AppLocalizations {
     return Intl.message(
       'Running Pace Calculator',
       name: 'title',
-      desc: 'Title pace',
+      desc: 'title',
     );
   }
 
   String get shortTitle {
     return Intl.message(
       'Pace Calculator',
-      name: 'short_title',
-      desc: 'Title short pace',
+      name: 'shortTitle',
+      desc: 'shortTitle',
     );
   }
 
   String get info {
     return Intl.message(
       'Information',
-      name: 'into',
-      desc: 'Title info',
+      name: 'info',
+      desc: 'info',
     );
   }
 
   String get infoOne {
     return Intl.message(
       'The running pace calculator helps you to calculate the time, distance or pace of your run. Calculating your pace is not only interesting, but also useful, as it helps you to run and train better.',
-      name: 'intoOne',
-      desc: 'info',
+      name: 'infoOne',
+      desc: 'infoOne',
     );
   }
 
   String get infoTwo {
     return Intl.message(
       'Enter any two values to calculate the third:',
-      name: 'intoOne',
-      desc: 'info',
+      name: 'infoTwo',
+      desc: 'infoTwo',
     );
   }
 
@@ -65,23 +65,23 @@ class AppLocalizations {
     return Intl.message(
       'Time',
       name: 'time',
-      desc: 'info',
+      desc: 'time',
     );
   }
 
   String get distance {
     return Intl.message(
       'Distance',
-      name: 'Distance',
-      desc: 'info',
+      name: 'distance',
+      desc: 'distance',
     );
   }
 
   String get pace {
     return Intl.message(
       'Pace',
-      name: 'Pace',
-      desc: 'info',
+      name: 'pace',
+      desc: 'pace',
     );
   }
 
@@ -89,7 +89,7 @@ class AppLocalizations {
     return Intl.message(
       'Calculate Pace',
       name: 'calcPace',
-      desc: 'info',
+      desc: 'calcPace',
     );
   }
 
@@ -97,7 +97,7 @@ class AppLocalizations {
     return Intl.message(
       'Pace Per Kilometer',
       name: 'paceKM',
-      desc: 'info',
+      desc: 'paceKM',
     );
   }
 
@@ -105,7 +105,7 @@ class AppLocalizations {
     return Intl.message(
       'Km',
       name: 'km',
-      desc: 'info',
+      desc: 'km',
     );
   }
 
@@ -113,23 +113,23 @@ class AppLocalizations {
     return Intl.message(
       'Seconds',
       name: 'seconds',
-      desc: 'info',
+      desc: 'seconds',
     );
   }
 
   String get minutes {
     return Intl.message(
       'Minutes',
-      name: 'Minutes',
-      desc: 'info',
+      name: 'minutes',
+      desc: 'minutes',
     );
   }
 
   String get hour {
     return Intl.message(
       'Hours',
-      name: 'Hours',
-      desc: 'info',
+      name: 'hour',
+      desc: 'hour',
     );
   }
 
@@ -137,23 +137,23 @@ class AppLocalizations {
     return Intl.message(
       'Time and pace are required to calculate distance.',
       name: 'distError',
-      desc: 'info',
+      desc: 'distError',
     );
   }
 
-    String get timeError {
+  String get timeError {
     return Intl.message(
       'Distance and pace are required to calculate time.',
       name: 'timeError',
-      desc: 'info',
+      desc: 'timeError',
     );
   }
 
-    String get paceError {
+  String get paceError {
     return Intl.message(
       'Time and distance are required to calculate pace.',
       name: 'paceError',
-      desc: 'info',
+      desc: 'paceError',
     );
   }
 
@@ -161,7 +161,7 @@ class AppLocalizations {
     return Intl.message(
       'Miles',
       name: 'miles',
-      desc: 'info',
+      desc: 'miles',
     );
   }
 
@@ -169,7 +169,7 @@ class AppLocalizations {
     return Intl.message(
       'Pace Per Mile',
       name: 'paceMile',
-      desc: 'info',
+      desc: 'paceMile',
     );
   }
 
@@ -177,7 +177,7 @@ class AppLocalizations {
     return Intl.message(
       'Calculate Time',
       name: 'calcTime',
-      desc: 'info',
+      desc: 'calcTime',
     );
   }
 
@@ -185,7 +185,7 @@ class AppLocalizations {
     return Intl.message(
       'Calculate Distance',
       name: 'calcDistance',
-      desc: 'info',
+      desc: 'calcDistance',
     );
   }
 
@@ -193,7 +193,7 @@ class AppLocalizations {
     return Intl.message(
       'Dark theme',
       name: 'dark',
-      desc: 'info',
+      desc: 'dark',
     );
   }
 }

@@ -1,4 +1,4 @@
-package com.example.pace_calculator
+package com.pace.pace_calculator
 
 import android.os.Bundle
 

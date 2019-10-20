@@ -1,86 +1,134 @@
 {
-  "@@last_modified": "2019-10-20T13:48:22.773052",
+  "@@last_modified": "2019-10-20T14:48:42.170513",
   "title": "Running Pace Calculator",
   "@title": {
-    "description": "Title pace",
+    "description": "title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "shortTitle": "Pace Calculator",
+  "@shortTitle": {
+    "description": "shortTitle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "info": "Information",
+  "@info": {
+    "description": "info",
+    "type": "text",
+    "placeholders": {}
+  },
+  "infoOne": "The running pace calculator helps you to calculate the time, distance or pace of your run. Calculating your pace is not only interesting, but also useful, as it helps you to run and train better.",
+  "@infoOne": {
+    "description": "infoOne",
+    "type": "text",
+    "placeholders": {}
+  },
+  "infoTwo": "Enter any two values to calculate the third:",
+  "@infoTwo": {
+    "description": "infoTwo",
     "type": "text",
     "placeholders": {}
   },
   "time": "Time",
   "@time": {
-    "description": "info",
+    "description": "time",
+    "type": "text",
+    "placeholders": {}
+  },
+  "distance": "Distance",
+  "@distance": {
+    "description": "distance",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pace": "Pace",
+  "@pace": {
+    "description": "pace",
     "type": "text",
     "placeholders": {}
   },
   "calcPace": "Calculate Pace",
   "@calcPace": {
-    "description": "info",
+    "description": "calcPace",
     "type": "text",
     "placeholders": {}
   },
   "paceKM": "Pace Per Kilometer",
   "@paceKM": {
-    "description": "info",
+    "description": "paceKM",
     "type": "text",
     "placeholders": {}
   },
   "km": "Km",
   "@km": {
-    "description": "info",
+    "description": "km",
     "type": "text",
     "placeholders": {}
   },
   "seconds": "Seconds",
   "@seconds": {
-    "description": "info",
+    "description": "seconds",
+    "type": "text",
+    "placeholders": {}
+  },
+  "minutes": "Minutes",
+  "@minutes": {
+    "description": "minutes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hour": "Hours",
+  "@hour": {
+    "description": "hour",
     "type": "text",
     "placeholders": {}
   },
   "distError": "Time and pace are required to calculate distance.",
   "@distError": {
-    "description": "info",
+    "description": "distError",
     "type": "text",
     "placeholders": {}
   },
   "timeError": "Distance and pace are required to calculate time.",
   "@timeError": {
-    "description": "info",
+    "description": "timeError",
     "type": "text",
     "placeholders": {}
   },
   "paceError": "Time and distance are required to calculate pace.",
   "@paceError": {
-    "description": "info",
+    "description": "paceError",
     "type": "text",
     "placeholders": {}
   },
   "miles": "Miles",
   "@miles": {
-    "description": "info",
+    "description": "miles",
     "type": "text",
     "placeholders": {}
   },
   "paceMile": "Pace Per Mile",
   "@paceMile": {
-    "description": "info",
+    "description": "paceMile",
     "type": "text",
     "placeholders": {}
   },
   "calcTime": "Calculate Time",
   "@calcTime": {
-    "description": "info",
+    "description": "calcTime",
     "type": "text",
     "placeholders": {}
   },
   "calcDistance": "Calculate Distance",
   "@calcDistance": {
-    "description": "info",
+    "description": "calcDistance",
     "type": "text",
     "placeholders": {}
   },
   "dark": "Dark theme",
   "@dark": {
-    "description": "info",
+    "description": "dark",
     "type": "text",
     "placeholders": {}
   }
