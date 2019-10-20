@@ -1,0 +1,103 @@
+import 'package:flutter/material.dart';
+import 'package:pace_calculator/ui/widgets/bullet.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pace_calculator/bloc/light_theme/bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class Info extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> _infoKey = GlobalKey<ScaffoldState>();
+
+    return Scaffold(
+      key: _infoKey,
+      appBar: AppBar(
+        title: Text('Information'),
+      ),
+      body: ListView(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Text(
+              'The running pace calculator helps you to calculate the time, distance or pace of your run. Calculating your pace is not only interesting, but also useful, as it helps you to run and train better.',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Text(
+              'Enter any two values to calculate the third:',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: <Widget>[
+                Bullet(),
+                Text(
+                  'Time',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: <Widget>[
+                Bullet(),
+                Text(
+                  'Distance',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: <Widget>[
+                Bullet(),
+                Text(
+                  'Pace',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          ),
+          Divider(
+            endIndent: 16,
+            indent: 16,
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: Text(
+                    'Dark theme',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                BlocBuilder<LightThemeBloc, bool>(
+                    builder: (BuildContext context, bool useLightTheme) {
+                  return Switch(
+                    value: !useLightTheme,
+                    onChanged: (bool value) async {
+                      BlocProvider.of<LightThemeBloc>(context).add(
+                          value ? LightThemeEvent.off : LightThemeEvent.on);
+                      SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      await prefs.setBool('useLightTheme', !value);
+                    },
+                  );
+                })
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
