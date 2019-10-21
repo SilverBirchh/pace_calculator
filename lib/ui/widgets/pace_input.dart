@@ -20,7 +20,6 @@ class PaceInput extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8),
                 child: TextField(
-                  maxLength: 2,
                   keyboardType: TextInputType.number,
                   controller: minutesController,
                   decoration: InputDecoration(
@@ -31,7 +30,6 @@ class PaceInput extends StatelessWidget {
             ),
             Expanded(
               child: TextField(
-                maxLength: 2,
                 keyboardType: TextInputType.number,
                 controller: secondsController,
                 decoration: InputDecoration(

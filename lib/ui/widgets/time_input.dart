@@ -24,7 +24,6 @@ class TimeInput extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: TextField(
-                maxLength: 2,
                 keyboardType: TextInputType.number,
                 controller: hoursController,
                 decoration: InputDecoration(
@@ -38,7 +37,6 @@ class TimeInput extends StatelessWidget {
                 child: TextField(
                   keyboardType: TextInputType.number,
                   controller: minutesController,
-                  maxLength: 2,
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context).minutes,
                   ),
@@ -47,7 +45,6 @@ class TimeInput extends StatelessWidget {
             ),
             Expanded(
               child: TextField(
-                maxLength: 2,
                 keyboardType: TextInputType.number,
                 controller: secondsController,
                 decoration: InputDecoration(
