@@ -27,9 +27,9 @@ class DistanceInput extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8),
                 child: TextField(
+                  maxLength: 2,
                   keyboardType: TextInputType.number,
                   controller: distanceController,
-                  onChanged: (v) => null,
                   decoration: InputDecoration(
                     labelText: measurement == Measurement.KM
                         ? AppLocalizations.of(context).km

@@ -64,8 +64,7 @@ class Timings {
 
   static double addSeconds(
       {String hours = '0', String minutes = '0', String seconds = '0'}) {
-
-    if ((hours == '' && minutes == '' && seconds == '') || (minutes == '' && seconds == '')) {
+    if (hours == '' && minutes == '' && seconds == '') {
       return null;
     }
 
